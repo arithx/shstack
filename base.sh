@@ -10,3 +10,6 @@ devstack/tools/create-stack-user.sh
 wget https://raw.github.com/arithx/shstack/master/stack_setup.sh -P /tmp
 chmod +755 /tmp/stack_setup.sh
 sudo -H -u stack /tmp/stack_setup.sh
+wget https://raw.github.com/arithx/shstack/master/tempest.sh -P /tmp
+chmod +755 /tmp/tempest.sh
+sudo -H -u stack /tmp/tempest.sh
