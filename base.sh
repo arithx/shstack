@@ -13,4 +13,4 @@ sudo -H -u stack /tmp/stack_setup.sh
 wget https://raw.github.com/arithx/shstack/master/tempest.sh -P /tmp
 chmod +755 /tmp/tempest.sh
 sudo -H -u stack /tmp/tempest.sh
-exit
+jobs
