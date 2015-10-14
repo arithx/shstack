@@ -1,2 +1,4 @@
-nohup (wget -O - https://raw.github.com/arithx/shstack/master/base.sh | sh) &
+wget https://raw.github.com/arithx/shstack/master/base.sh
+chmod +x base.sh
+nohup ./base.sh 2>&1> base.log &
 wait $!
