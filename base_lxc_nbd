@@ -10,7 +10,7 @@ devstack/tools/create-stack-user.sh
 wget https://raw.github.com/arithx/shstack/master/stack_setup_lxc_nbd.sh -P /tmp
 chmod +755 /tmp/stack_setup_lxc_nbd.sh
 sudo -H -u stack /tmp/stack_setup_lxc_nbd.sh
-wget https://raw.github.com/arithx/shstack/master/tempest.sh -P /tmp
-chmod +755 /tmp/tempest.sh
-sudo -H -u stack /tmp/tempest.sh
+wget https://raw.github.com/arithx/shstack/master/tempest_concurrency.sh -P /tmp
+chmod +755 /tmp/tempest_concurrency.sh
+sudo -H -u stack /tmp/tempest_concurrency.sh
 tar -zcvf /opt/stack/new/nova_logs.tar.gz /opt/stack/new/n-*
