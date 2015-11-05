@@ -1,0 +1,9 @@
+#cloud-config
+apt_mirror: http://mirror.rackspace.com/ubuntu/
+package_upgrade: true
+packages:
+  - git-core
+  - wget
+runcmd:
+  - wget -O - https://raw.github.com/arithx/shstack/master/base_lxc_nbd.sh | sh
+output: { all: '| tee -a /var/log/cloud-init-output.log' }
