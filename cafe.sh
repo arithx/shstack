@@ -3,11 +3,6 @@ apt-get update && apt-get install -y git openssh-server wget python-dev make bui
 wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 python get-pip.py
 
-# Syntribos requires opencafe but installs an older version
-# We just use it for a library workaround currently
-# Make sure that this is installed first and upgraded over later
-git clone https://github.com/openstack/syntribos.git && pip install ./syntribos
-
 # Pulling a specific review head until it is merged which provides subunit results
 git clone https://github.com/stackforge/opencafe.git
 cd opencafe

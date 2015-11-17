@@ -1,0 +1,10 @@
+#cloud-config
+apt_mirror: http://mirror.rackspace.com/ubuntu/
+package_upgrade: true
+packages:
+  - git-core
+  - wget
+runcmd:
+  - sleep 120
+  - wget -O - https://raw.github.com/arithx/shstack/master/devstack_install.sh | sh
+output: { all: '| tee -a /var/log/cloud-init-output.log' }
