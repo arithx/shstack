@@ -38,3 +38,5 @@ sed -rie "s/<flavor_id1>/$flavor_id1/" /root/.opencafe/configs/compute/cafe_devs
 sed -rie "s/<flavor_id2>/$flavor_id2/" /root/.opencafe/configs/compute/cafe_devstack.config
 
 cafe-runner compute cafe_devstack --result subunit --result-directory /root/
+
+tar -zcvf /root/cafe_logs.tar.gz /root/.opencafe/logs/compute/cafe_devstack.config/*
