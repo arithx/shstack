@@ -6,7 +6,7 @@ python get-pip.py
 # Pulling a specific review head until it is merged which provides subunit results
 git clone https://github.com/stackforge/opencafe.git
 cd opencafe
-git fetch https://review.openstack.org/openstack/opencafe refs/changes/32/241732/12 && git checkout FETCH_HEAD
+git fetch https://review.openstack.org/openstack/opencafe refs/changes/32/241732/13 && git checkout FETCH_HEAD
 pip install . --upgrade
 cd ..
 
