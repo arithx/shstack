@@ -33,9 +33,9 @@ source /opt/stack/devstack/openrc
 image_id=$(nova image-show cirros-0.3.4-x86_64-uec | egrep "id" | egrep -v "_id" | egrep "([[:alnum:]]+-?){5}" -o)
 flavor_id1=$(nova flavor-show m1.nano | egrep "id" | egrep [0-9]* -o)
 flavor_id2=$(nova flavor-show m1.micro | egrep "id" | egrep [0-9]* -o)
-sed -rie "s/<image_id>/$image_id/" /root/.opencafe/configs/compute/cafe_devstack.config
-sed -rie "s/<flavor_id1>/$flavor_id1/" /root/.opencafe/configs/compute/cafe_devstack.config
-sed -rie "s/<flavor_id2>/$flavor_id2/" /root/.opencafe/configs/compute/cafe_devstack.config
+sed -r -i -e "s/<image_id>/$image_id/" /root/.opencafe/configs/compute/cafe_devstack.config
+sed -r -i -e "s/<flavor_id1>/$flavor_id1/" /root/.opencafe/configs/compute/cafe_devstack.config
+sed -r -i -e "s/<flavor_id2>/$flavor_id2/" /root/.opencafe/configs/compute/cafe_devstack.config
 
 cafe-runner compute cafe_devstack --result subunit --result-directory /root/
 
