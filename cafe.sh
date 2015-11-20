@@ -39,4 +39,4 @@ sed -r -i -e "s/<flavor_id2>/$flavor_id2/" /root/.opencafe/configs/compute/cafe_
 
 cafe-runner compute cafe_devstack --result subunit --result-directory /root/
 
-tar -zcvf /root/cafe_logs.tar.gz /root/.opencafe/logs/compute/cafe_devstack.config/*
+tar -zcvf /root/cafe_logs.tar.gz /root/.opencafe/logs/compute/cafe_devstack.config/* /root/.opencafe/configs/compute/cafe_devstack.config
