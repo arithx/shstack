@@ -3,13 +3,7 @@ apt-get update && apt-get install -y git openssh-server wget python-dev make bui
 wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 python get-pip.py
 
-# Pulling a specific review head until it is merged which provides subunit results
-git clone https://github.com/stackforge/opencafe.git
-cd opencafe
-git fetch https://review.openstack.org/openstack/opencafe refs/changes/32/241732/13 && git checkout FETCH_HEAD
-pip install . --upgrade
-cd ..
-
+git clone https://github.com/stackforge/opencafe.git && pip install ./opencafe
 git clone https://github.com/stackforge/cloudcafe.git && pip install ./cloudcafe
 git clone https://github.com/stackforge/cloudroast.git && pip install ./cloudroast
 
