@@ -28,6 +28,11 @@ source /opt/stack/devstack/openrc
 image_id=$(nova image-list | head -4 | tail -1 | egrep "([[:alnum:]]+-?){5}" -o | head -1)
 sed -r -i -e "s/<image_id>/$image_id/" /root/.opencafe/configs/compute/cafe_devstack.config
 
+# TODO: remove temp code
+echo $image_id > /root/image_id
+echo $(nova image-list) >> /root/image_id
+
+
 cafe-runner compute cafe_devstack --result subunit --result-directory /root/
 
 tar -zcvf /root/cafe_logs.tar.gz /root/.opencafe/logs/compute/cafe_devstack.config/* /root/.opencafe/configs/compute/cafe_devstack.config
