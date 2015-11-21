@@ -34,4 +34,4 @@ echo $(nova image-list) >> /root/image_id
 
 
 cafe-runner compute cafe_devstack --result subunit --result-directory /root/
-tar -zcvf /root/cafe_logs.tar.gz /root/.opencafe/logs/compute/cafe_devstack.config/* /root/.opencafe/configs/compute/cafe_devstack.config /root/image_idtar -zcvf /root/cafe_logs.tar.gz /root/.opencafe/logs/compute/cafe_devstack.config/* /root/.opencafe/configs/compute/cafe_devstack.config
+tar -zcvf /root/cafe_logs.tar.gz /root/.opencafe/logs/compute/cafe_devstack.config/* /root/.opencafe/configs/compute/cafe_devstack.config /root/image_id
