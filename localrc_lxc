@@ -8,7 +8,9 @@ SERVICE_PASSWORD=password
 SERVICE_TOKEN=111222333444
 SWIFT_HASH=1234123412341234
 ROOTSLEEP=0
-ENABLED_SERVICES=c-api,c-bak,c-sch,c-vol,ceilometer-acentral,ceilometer-acompute,ceilometer-alarm-evaluator,ceilometer-alarm-notifier,ceilometer-anotification,ceilometer-api,ceilometer-collector,cinder,dstat,g-api,g-reg,horizon,key,mysql,n-api,n-cond,n-cpu,n-crt,n-net,n-obj,n-sch,rabbit,s-account,s-container,s-object,s-proxy,tempest
+ENABLED_SERVICES=c-api,c-bak,c-sch,c-vol,ceilometer-acentral,ceilometer-acompute,ceilometer-alarm-evaluator,ceilometer-alarm-notifier,ceilometer-anotification,ceilometer-api,ceilometer-collector,cinder,dstat,g-api,g-reg,horizon,key,mysql,n-api,n-cond,n-cpu,n-crt,n-obj,n-sch,rabbit,s-account,s-container,s-object,s-proxy,tempest
+# Neutron
+ENABLED_SERVICES+=,q-svc,q-agt,q-dhcp,q-l3,q-meta,neutron
 # Screen console logs will capture service logs.
 SCREEN_LOGDIR=/opt/stack/new/screen-logs
 LOGFILE=/opt/stack/new/devstacklog.txt
